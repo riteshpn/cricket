@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 
 class CricketProvider extends ChangeNotifier {
   String cricketMatches = "Cricket Matches";
+  String tapView = 'Tap to see players';
   List<DomainCricketModel> _cricket = [
     DomainCricketModel(
       teamName: "Aus vs Ind",
-      img:"https://www.cricadium.com/wp-content/uploads/2024/10/Cricadium-2024-10-12T183240.828-jpg.webp",
+      img:
+          "https://www.cricadium.com/wp-content/uploads/2024/10/Cricadium-2024-10-12T183240.828-jpg.webp",
       players: [
         DomainPlayerModel(
           name: "Virat Kohli",
@@ -16,14 +18,15 @@ class CricketProvider extends ChangeNotifier {
           battingStyle: "Right Handed Bat",
           bowlingStyle: "None",
           country: "India",
+          image: "",
         ),
         DomainPlayerModel(
-          name: "Player 2",
-          role: "Bowler",
-          battingStyle: "Left Handed Bat",
-          bowlingStyle: "Right-arm offbreak",
-          country: "Australia",
-        ),
+            name: "Player 2",
+            role: "Bowler",
+            battingStyle: "Left Handed Bat",
+            bowlingStyle: "Right-arm offbreak",
+            country: "Australia",
+            image: ""),
       ],
     )
   ];
@@ -54,12 +57,12 @@ class CricketProvider extends ChangeNotifier {
           var player = team.players[p];
 
           var playerDomainModel = DomainPlayerModel(
-            name: player.name,
-            role: player.role,
-            battingStyle: player.battingStyle,
-            bowlingStyle: player.bowlingStyle ?? "None",
-            country: player.country,
-          );
+              name: player.name,
+              role: player.role,
+              battingStyle: player.battingStyle,
+              bowlingStyle: player.bowlingStyle ?? "None",
+              country: player.country,
+              image: player.playerImg);
 
           playerDetails.add(playerDomainModel);
         }

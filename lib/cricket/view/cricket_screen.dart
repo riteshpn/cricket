@@ -1,4 +1,4 @@
-import 'package:cricket/cricket/view/player_detail_screen.dart';
+import 'package:cricket/cricket/view/player_name_screen.dart';
 import 'package:cricket/cricket/view_model/cricket_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +45,7 @@ class CricketListScreen extends StatelessWidget {
                     match.teamName,
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
                   ),
-                  subtitle: Text('Tap to see players'),
+                  subtitle: Text(cricketProvider.cricketMatches),
                   trailing: Icon(Icons.arrow_forward_ios),
                   onTap: () {
                     Navigator.push(
