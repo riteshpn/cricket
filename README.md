@@ -1,17 +1,33 @@
 # cricket
 
-A new Flutter project.
 
-## Getting Started
+Flutter MVVM Example App
+Overview
+This project is a simple Flutter application developed for learning purposes, focusing on the MVVM (Model-View-ViewModel) architecture. It aims to demonstrate the separation of UI and business logic.
 
-This project is a starting point for a Flutter application.
+Key Features
+MVVM Architecture: This app follows the MVVM pattern, ensuring a clear separation between UI and business logic.
+Static UI: The user interface is static, allowing the data to be managed separately in the business logic.
+Enum Usage: Implemented enums for better state management and clarity in the code.
 
-A few resources to get you started if this is your first Flutter project:
+Project Structure
+Model: Contains data structures and business logic.
+View: The UI components that display data without directly containing any business logic.
+ViewModel: Acts as a bridge between the Model and View, managing the data and logic needed for the UI.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+API Integration
+The app interacts with a REST API. Please find the API URL and key in the lib/constants.dart file.
+Screens
+The application consists of three main screens, showcasing how UI is separated from data logic:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# cricket" 
+Home Screen: Displays a summary of the app's features.
+ListTeamScreen:Show only Teams 
+Details Screen: Shows detailed information retrieved from the API.
+ListPlayerScreen: Allows users to adjust app settings.
+
+Advantages of MVVM
+Separation of Concerns: Clear distinction between UI and business logic, making the codebase easier to manage and test.
+Reusability: ViewModels can be reused across different views.
+Testability: Business logic can be tested independently from the UI, enhancing the overall reliability of the application.
+Conclusion
+This project has been an amazing experience, allowing me to explore the benefits of the MVVM architecture in Flutter. Feel free to explore the code and implement your features!

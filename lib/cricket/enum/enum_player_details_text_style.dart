@@ -58,7 +58,6 @@ extension TextStyleTypeExtension on TextStyleType {
   }
 }
 
-
 //icon extension for according to player role
 enum IconeNameType {
   sportbatting,
@@ -77,7 +76,7 @@ extension IconeNameTypeExtension on IconeNameType {
       case IconeNameType.sportbowling:
         return Icons.sports_tennis;
       case IconeNameType.sportflag:
-        return  Icons.flag;
+        return Icons.flag;
 
       default:
         return Icons.wrap_text;
@@ -90,9 +89,9 @@ extension IconeNameTypeExtension on IconeNameType {
             IconeNameType.sportbatting ||
             IconeNameType.sportcricket ||
             IconeNameType.sportflag:
-        return Colors.white;
-         default:
-        return Colors.green;
+        return Colors.black;
+      default:
+        return Colors.black;
     }
   }
 }
