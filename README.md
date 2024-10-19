@@ -1,7 +1,10 @@
 # cricket
-![WhatsApp Image 2024-10-19 at 18 07 52_064bce90](https://github.com/user-attachments/assets/e0e279f4-c93c-49a8-b131-0c1deb06b0a9)
-![WhatsApp Image 2024-10-19 at 18 07 53_a6deea03](https://github.com/user-attachments/assets/f645cd79-2de2-49e5-a8dc-7aa312e94a44)
-![WhatsApp Image 2024-10-19 at 18 07 53_ae3990f2](https://github.com/user-attachments/assets/f3a30727-f5ff-41ef-ab2b-b4f69c88a690)
+![WhatsApp Image 2024-10-19 at 18 20 26_f222e728](https://github.com/user-attachments/assets/d7f267f4-3a75-4ef9-8006-64d10698882b)
+![WhatsApp Image 2024-10-19 at 18 20 25_eb97772a](https://github.com/user-attachments/assets/e566c829-14b9-4616-b8af-f496822e7ec2)
+![WhatsApp Image 2024-10-19 at 18 20 25_24dda449](https://github.com/user-attachments/assets/61144a7e-9203-4c8f-bdb9-593f5551de01)
+
+
+
 
 
 
