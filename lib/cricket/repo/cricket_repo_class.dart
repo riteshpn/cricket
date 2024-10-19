@@ -3,5 +3,5 @@
 import 'package:cricket/cricket/model/data_model.dart/cricket_data_model.dart';
 
 abstract class IApiServiceCricketTeams {
-  Future<ApiResponse> fetchTeamDetails();
+  Future<CricketApiResponce> fetchTeamDetails();
 }
