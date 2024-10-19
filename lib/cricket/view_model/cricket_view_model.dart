@@ -46,7 +46,7 @@ class CricketProvider extends ChangeNotifier {
     notifyListeners();
     final cricketService = ApiServiceImpl();
     try {
-      ApiResponse cricketTeamList = await cricketService.fetchTeamDetails();
+      CricketApiResponce cricketTeamList = await cricketService.fetchTeamDetails();
 
       List<DomainCricketModel> cricketTeamNames = [];
       for (int i = 0; i < cricketTeamList.data.length; i++) {
@@ -86,4 +86,64 @@ class CricketProvider extends ChangeNotifier {
       notifyListeners();
     }
   }
+
+
+
 }
+
+
+// Future<void> fetchCricketData() async {
+//   notifyListeners();
+//   final cricketService = ApiServiceImpl();
+
+//   try {
+//     ApiResponse cricketTeamList = await cricketService.fetchTeamDetails();
+//     List<DomainCricketModel> cricketTeamNames = [];
+
+//     for (var team in cricketTeamList.data) {
+//       print(team);
+//       var playerDetails = _createPlayerDetails(team.players);
+
+//       var cricketModel = _createCricketModel(team, playerDetails);
+//       print(cricketModel);
+
+//       cricketTeamNames.add(cricketModel);
+//     }
+
+//     _cricket = cricketTeamNames;
+//     errorMessage = "";
+//     notifyListeners();
+//   } catch (error) {
+//     errorMessage = error.toString();
+//     print(errorMessage);
+//     notifyListeners();
+//   }
+// }
+
+// List<DomainPlayerModel> _createPlayerDetails(List<Player> players) {
+//   List<DomainPlayerModel> playerDetails = [];
+
+//   for (var player in players) {
+//     var playerDomainModel = DomainPlayerModel(
+//       name: player.name,
+//       role: "Role : ${player.role}",
+//       battingStyle: "Batting Style: ${player.battingStyle}",
+//       bowlingStyle: "Bowling Style: ${player.bowlingStyle ?? "None"}",
+//       country: "Country : ${player.country}",
+//       image: player.playerImg,
+//     );
+
+//     playerDetails.add(playerDomainModel);
+//   }
+
+//   return playerDetails;
+// }
+
+// DomainCricketModel _createCricketModel(
+//     Team team, List<DomainPlayerModel> playerDetails) {
+//   return DomainCricketModel(
+//     teamName: team.teamName,
+//     img: team.img,
+//     players: playerDetails,
+//   );
+

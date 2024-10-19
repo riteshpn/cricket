@@ -1,12 +1,12 @@
 // post_detail_data_model.dart
-class ApiResponse {
+class CricketApiResponce {
   final List<Team> data;
   final String status;
 
-  ApiResponse({required this.data, required this.status});
+  CricketApiResponce({required this.data, required this.status});
 
-  factory ApiResponse.fromJson(Map<String, dynamic> json) {
-    return ApiResponse(
+  factory CricketApiResponce.fromJson(Map<String, dynamic> json) {
+    return CricketApiResponce(
       data: (json['data'] as List).map((e) => Team.fromJson(e)).toList(),
       status: json['status'],
     );

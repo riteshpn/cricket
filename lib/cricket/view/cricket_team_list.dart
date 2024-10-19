@@ -26,7 +26,7 @@ class CricketTeamListScreen extends StatelessWidget {
               child: Text(cricketProvider.errorMessage),
             );
           } else if (cricketProvider.cricket.isEmpty) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
