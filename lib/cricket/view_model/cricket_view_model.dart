@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class CricketProvider extends ChangeNotifier {
   String cricketMatches = "Cricket Matches";
   String tapView = 'Tap to see players';
+  String errorMessage = "";
   List<DomainCricketModel> _cricket = [
     DomainCricketModel(
       teamName: "Aus vs Ind",
@@ -58,10 +59,10 @@ class CricketProvider extends ChangeNotifier {
 
           var playerDomainModel = DomainPlayerModel(
               name: player.name,
-              role: player.role,
-              battingStyle: player.battingStyle,
-              bowlingStyle: player.bowlingStyle ?? "None",
-              country: player.country,
+              role: "Role : ${player.role}",
+              battingStyle: "Batting Style: ${player.battingStyle}",
+              bowlingStyle: "Bowling Style:${player.bowlingStyle ?? "None"}",
+              country: "Country : ${player.country}",
               image: player.playerImg);
 
           playerDetails.add(playerDomainModel);
@@ -71,14 +72,18 @@ class CricketProvider extends ChangeNotifier {
           img: team.img,
           players: playerDetails,
         );
+        print(cricketModel);
 
         cricketTeamNames.add(cricketModel);
       }
 
       _cricket = cricketTeamNames;
+      errorMessage = "";
       notifyListeners();
-    } catch (e) {
-      print('Error fetching cricket data: $e');
+    } catch (error) {
+      errorMessage = error.toString();
+      print(errorMessage);
+      notifyListeners();
     }
   }
 }

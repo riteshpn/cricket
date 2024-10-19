@@ -1,9 +1,11 @@
-import 'package:cricket/cricket/view/player_name_screen.dart';
+import 'package:cricket/cricket/view/player_name_list_screen.dart';
 import 'package:cricket/cricket/view_model/cricket_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class CricketListScreen extends StatelessWidget {
+class CricketTeamListScreen extends StatelessWidget {
+  const CricketTeamListScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +21,15 @@ class CricketListScreen extends StatelessWidget {
       ),
       body: Consumer<CricketProvider>(
         builder: (context, cricketProvider, child) {
+          if (cricketProvider.errorMessage.isNotEmpty) {
+            return Center(
+              child: Text(cricketProvider.errorMessage),
+            );
+          } else if (cricketProvider.cricket.isEmpty) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
           return ListView.builder(
             itemCount: cricketProvider.cricket.length,
             itemBuilder: (context, index) {
@@ -43,16 +54,19 @@ class CricketListScreen extends StatelessWidget {
                   ),
                   title: Text(
                     match.teamName,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 12),
                   ),
                   subtitle: Text(cricketProvider.cricketMatches),
-                  trailing: Icon(Icons.arrow_forward_ios),
+                  trailing: const Icon(Icons.arrow_forward_ios),
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => PlayerListScreen(
-                            players: match.players, teamName: match.teamName),
+                          players: match.players,
+                          teamName: match.teamName,
+                        ),
                       ),
                     );
                   },

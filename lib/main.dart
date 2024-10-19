@@ -1,4 +1,4 @@
-import 'package:cricket/cricket/view/cricket_screen.dart';
+import 'package:cricket/cricket/view/cricket_team_list.dart';
 import 'package:cricket/cricket/view_model/cricket_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CricketListScreen(),
+      home: CricketTeamListScreen(),
     );
   }
 }

@@ -17,7 +17,7 @@ class PlayerListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           teamName,
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold,),
         ),
       ),
       body: ListView.builder(
@@ -25,8 +25,7 @@ class PlayerListScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           final player = players[index];
           return Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            padding:const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
             child: Card(
               color: Colors.blueGrey.shade200,
               elevation: 4,
@@ -46,7 +45,7 @@ class PlayerListScreen extends StatelessWidget {
                 child: ListTile(
                   title: Text(
                     player.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
@@ -58,7 +57,7 @@ class PlayerListScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 13),
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios, size: 15),
+                  trailing: const Icon(Icons.arrow_forward_ios, size: 15),
                 ),
               ),
             ),
