@@ -1,4 +1,7 @@
 # cricket
+List team screen(https://github.com/user-attachments/assets/d7f267f4-3a75-4ef9-8006-64d10698882b)
+List team player(https://github.com/user-attachments/assets/e566c829-14b9-4616-b8af-f496822e7ec2)
+Detail player screen(https://github.com/user-attachments/assets/61144a7e-9203-4c8f-bdb9-593f5551de01)
 
 
 Flutter MVVM Example App
@@ -22,8 +25,8 @@ The application consists of three main screens, showcasing how UI is separated f
 
 Home Screen: Displays a summary of the app's features.
 ListTeamScreen:Show only Teams 
+ListPlayerScreen: List of player show in this screen according to tap team button.
 Details Screen: Shows detailed information retrieved from the API.
-ListPlayerScreen: Allows users to adjust app settings.
 
 Advantages of MVVM
 Separation of Concerns: Clear distinction between UI and business logic, making the codebase easier to manage and test.
